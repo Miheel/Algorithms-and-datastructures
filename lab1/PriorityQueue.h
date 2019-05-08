@@ -12,11 +12,10 @@ public:
 	T peek() const;
 	size_t size() const;
 	bool isEmpty() const;
-	void print();
 
 private:
-	int nrOfElem;
-	int cap;
+	size_t nrOfElem;
+	size_t cap;
 	T *elem;
 	void siftDown(size_t index);
 	void percUp(size_t size);
@@ -27,11 +26,11 @@ private:
 	{
 		virtual const char* what() const throw()
 		{
-			return "Empty arr";
+			return "Empty queue";
 		}
 	}empty;
 };
-#endif // !PRIORITYQUEUE_H
+
 template<typename T>
 inline PriorityQueue<T>::PriorityQueue()
 {
@@ -50,7 +49,7 @@ template<typename T>
 inline void PriorityQueue<T>::enqueue(T element)
 {
 	++this->nrOfElem;
-	if (this->nrOfElem == this->cap)
+	if (this->size() == this->cap)
 	{
 		this->expand();
 	}
@@ -93,22 +92,11 @@ template<typename T>
 inline bool PriorityQueue<T>::isEmpty() const
 {
 	bool check = false;
-	if (this->nrOfElem == 0)
+	if (this->size() == 0)
 	{
 		check = true;
 	}
 	return check;
-}
-
-template<typename T>
-inline void PriorityQueue<T>::print()
-{
-	std::cout << "arr: ";
-	for (size_t i = 1; i <= this->size(); i++)
-	{
-		std::cout << this->elem[i] << ", ";
-	}
-	std::cout << "\nNrof elem: "<< this->nrOfElem << "\n";
 }
 
 template<typename T>
@@ -117,12 +105,12 @@ inline void PriorityQueue<T>::siftDown(size_t index)
 	while (index * 2 <= this->size())
 	{
 		size_t	child = index * 2;
-		if (child <= this->size() && this->elem[child] > this->elem[child + 1])
+		if (child <= this->size() && this->elem[child + 1] < this->elem[child])
 		{
 			child++;
 		}
 
-		if (this->elem[index] > this->elem[child])
+		if (this->elem[child] < this->elem[index])
 		{
 			T temp = this->elem[index];
 			this->elem[index] = this->elem[child];
@@ -158,10 +146,11 @@ inline void PriorityQueue<T>::expand()
 	this->cap = this->cap * 2;
 	T *temp = new T[this->cap];
 
-	for (int i = 0; i < this->nrOfElem; i++)
+	for (size_t i = 0; i < this->size(); i++)
 	{
 		temp[i] = this->elem[i];
 	}
 	this->freemen();
 	this->elem = temp;
 }
+#endif // !PRIORITYQUEUE_H
