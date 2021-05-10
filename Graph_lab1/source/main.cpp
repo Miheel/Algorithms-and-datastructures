@@ -9,19 +9,21 @@
 #include <sstream>
 #include <fstream>
 
-#include "reader.hpp"
-#include "graph.hpp"
+#include "parser.hpp"
+#include "u_graph.hpp"
+
+using namespace cor;
 
 int main() {
-	Reader reader;
+	Parser parser("export.txt");
 
-	reader.open("export.txt");
-	reader.makeAdjMatrix();
+	parser.parse();
+	parser.makeAdjMatrix();
 
-	auto matrix = reader.getMatrix();
-	auto Vertices = reader.getVertices();
+	auto matrix = parser.getMatrix();
+	auto Vertices = parser.getVertices();
 
-	Graph<cor::adjMatrix, cor::vertices, cor::Vertex> graph(matrix, Vertices);
+	graph::U_Graph<graph::adjMatrix, graph::vertices, graph::Vertex> graph(matrix, Vertices);
 
 	if ((graph.breadthFirst(Vertices[0]) && graph.depthFirst(Vertices[0])) == false)
 	{
@@ -31,7 +33,7 @@ int main() {
 	std::cout << std::boolalpha << graph.breadthFirst(Vertices[0]) << graph.depthFirst(Vertices[0]);
 
 
-	cor::Vertex *src = &Vertices[24], *target = &Vertices[37];
+	graph::Vertex *src = &Vertices[24], *target = &Vertices[37];
 	graph.dijkstra(*src, *target);
 
 	src = &Vertices[46], target = &Vertices[47];
@@ -41,7 +43,7 @@ int main() {
 	graph.dijkstra(*src, *target);
 
 
-	reader.exportGraph("export.cvs", ",");
+	parser.exportGraph("export.cvs", ",");
 
 	return 0;
 }

@@ -13,22 +13,24 @@
 #include <fstream>
 #include "typedef.hpp"
 
-class Reader
+class Parser
 {
 public:
-	Reader() = default;
-	~Reader() = default;
+	Parser(const std::string& filename);
+	Parser() = default;
+	~Parser() = default;
 
 	/**
 	* Opens a file and parses through it 
 	*
 	* @param filename
 	*/
-	void open(const std::string filename);
+	void open(const std::string& filename);
+	void parse();
 
-	cor::adjMatrix getMatrix() const;
-	cor::vertices getVertices() const;
-	cor::edges getEdges() const;
+	cor::graph::adjMatrix getMatrix() const;
+	cor::graph::vertices getVertices() const;
+	cor::graph::edges getEdges() const;
 
 	/**
 	* Creates a 2d vector
@@ -51,15 +53,17 @@ public:
 	void exportGraph(const std::string filename, const std::string delim) const;
 
 private:
+	std::ifstream in;
+
 	cor::TOKEN getType(std::ifstream &in) const;
 
 	void readComment(std::ifstream &in) const;
-	cor::Vertex readMeta(std::ifstream &in) const;
-	cor::Edge readEdge(std::ifstream &in) const;
-
-	cor::edges edgeList;
-	cor::vertices vertexList;
-	cor::adjMatrix adjMatrix;
-	cor::adjList adjList;
+	cor::graph::Vertex readMeta(std::ifstream &in) const;
+	cor::graph::Edge readEdge(std::ifstream &in) const;
+	
+	cor::graph::edges edgeList;
+	cor::graph::vertices vertexList;
+	cor::graph::adjMatrix adjMatrix;
 };
+
 #endif // !READER_HPP
