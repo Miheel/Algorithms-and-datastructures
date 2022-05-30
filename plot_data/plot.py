@@ -32,16 +32,16 @@ def subplot_specs(file, search_funk_name):
 #Searching
 #Linear
 plt.subplot(2,2,1)
-subplot_specs("searching_data_points\\Lineas_search.cvs", "Linear search")
+subplot_specs("searching_data_points\\Lineas_search.csv", "Linear search")
 #Binary
 plt.subplot(2,2,2)
-subplot_specs("searching_data_points\\binary_search.cvs", "Binary search")
+subplot_specs("searching_data_points\\binary_search.csv", "Binary search")
 #Binary search tree
 plt.subplot(2,2,3)
-subplot_specs("searching_data_points\\bst_search.cvs", "Binary search tree search")
+subplot_specs("searching_data_points\\bst_search.csv", "Binary search tree search")
 #Hashtabel
 plt.subplot(2,2,4)
-subplot_specs("searching_data_points\\hashtable_search.cvs", "Hashtabel search")
+subplot_specs("searching_data_points\\hashtable_search.csv", "Hashtabel search")
 
 # mng = plt.get_current_fig_manager()
 # mng.window.showMaximized()
@@ -50,16 +50,16 @@ plt.show()
 # #Sorting
 # #insertion
 # plt.subplot(2,2,1)
-# subplot_specs("sorting_data_points\insertion_random.cvs", "insertion sort random")
+# subplot_specs("sorting_data_points\insertion_random.csv", "insertion sort random")
 
 # plt.subplot(2,2,2)
-# subplot_specs("sorting_data_points\insertion_falling.cvs", "insertion sort falling")
+# subplot_specs("sorting_data_points\insertion_falling.csv", "insertion sort falling")
 
 # plt.subplot(2,2,3)
-# subplot_specs("sorting_data_points\insertion_growing.cvs", "insertion sort growing")
+# subplot_specs("sorting_data_points\insertion_growing.csv", "insertion sort growing")
 
 # plt.subplot(2,2,4)
-# subplot_specs("sorting_data_points\insertion_constant.cvs", "insertion sort constant")
+# subplot_specs("sorting_data_points\insertion_constant.csv", "insertion sort constant")
 
 # # mng = plt.get_current_fig_manager()
 # # mng.window.showMaximized()
@@ -67,16 +67,16 @@ plt.show()
 
 # #selection
 # plt.subplot(2,2,1)
-# subplot_specs("sorting_data_points\selection_random.cvs", "selection sort random")
+# subplot_specs("sorting_data_points\selection_random.csv", "selection sort random")
 
 # plt.subplot(2,2,2)
-# subplot_specs("sorting_data_points\selection_falling.cvs", "selection sort falling")
+# subplot_specs("sorting_data_points\selection_falling.csv", "selection sort falling")
 
 # plt.subplot(2,2,3)
-# subplot_specs("sorting_data_points\selection_growing.cvs", "selection sort growing")
+# subplot_specs("sorting_data_points\selection_growing.csv", "selection sort growing")
 
 # plt.subplot(2,2,4)
-# subplot_specs("sorting_data_points\selection_constant.cvs", "selection sort constant")
+# subplot_specs("sorting_data_points\selection_constant.csv", "selection sort constant")
 
 # # mng = plt.get_current_fig_manager()
 # # mng.window.showMaximized()
@@ -84,16 +84,16 @@ plt.show()
 
 # #quicksort left
 # plt.subplot(2,2,1)
-# subplot_specs("sorting_data_points\quicksortL_random.cvs", "quicksort left pivot sort random")
+# subplot_specs("sorting_data_points\quicksortL_random.csv", "quicksort left pivot sort random")
 
 # plt.subplot(2,2,2)
-# subplot_specs("sorting_data_points\quicksortL_falling.cvs", "quicksort left pivot sort falling")
+# subplot_specs("sorting_data_points\quicksortL_falling.csv", "quicksort left pivot sort falling")
 
 # plt.subplot(2,2,3)
-# subplot_specs("sorting_data_points\quicksortL_growing.cvs", "quicksort left pivot sort growing")
+# subplot_specs("sorting_data_points\quicksortL_growing.csv", "quicksort left pivot sort growing")
 
 # plt.subplot(2,2,4)
-# subplot_specs("sorting_data_points\quicksortL_constant.cvs", "quicksort left pivot sort constant")
+# subplot_specs("sorting_data_points\quicksortL_constant.csv", "quicksort left pivot sort constant")
 
 # # mng = plt.get_current_fig_manager()
 # # mng.window.showMaximized()
@@ -101,16 +101,16 @@ plt.show()
 
 # #quicksort mediam
 # plt.subplot(2,2,1)
-# subplot_specs("sorting_data_points\quicksortm_random.cvs", "quicksort median pivot sort random")
+# subplot_specs("sorting_data_points\quicksortm_random.csv", "quicksort median pivot sort random")
 
 # plt.subplot(2,2,2)
-# subplot_specs("sorting_data_points\quicksortm_falling.cvs", "quicksort median pivot sort falling")
+# subplot_specs("sorting_data_points\quicksortm_falling.csv", "quicksort median pivot sort falling")
 
 # plt.subplot(2,2,3)
-# subplot_specs("sorting_data_points\quicksortm_growing.cvs", "quicksort median pivot sort growing")
+# subplot_specs("sorting_data_points\quicksortm_growing.csv", "quicksort median pivot sort growing")
 
 # plt.subplot(2,2,4)
-# subplot_specs("sorting_data_points\quicksortm_constant.cvs", "quicksort median pivot sort constant")
+# subplot_specs("sorting_data_points\quicksortm_constant.csv", "quicksort median pivot sort constant")
 
 # # mng = plt.get_current_fig_manager()
 # # mng.window.showMaximized()
@@ -118,16 +118,16 @@ plt.show()
 
 # #std::sort
 # plt.subplot(2,2,1)
-# subplot_specs("sorting_data_points\stdsort_random.cvs", "std::sort sort random")
+# subplot_specs("sorting_data_points\stdsort_random.csv", "std::sort sort random")
 
 # plt.subplot(2,2,2)
-# subplot_specs("sorting_data_points\stdsort_falling.cvs", "std::sort sort falling")
+# subplot_specs("sorting_data_points\stdsort_falling.csv", "std::sort sort falling")
 
 # plt.subplot(2,2,3)
-# subplot_specs("sorting_data_points\stdsort_growing.cvs", "std::sort sort growing")
+# subplot_specs("sorting_data_points\stdsort_growing.csv", "std::sort sort growing")
 
 # plt.subplot(2,2,4)
-# subplot_specs("sorting_data_points\stdsort_constant.cvs", "std::sort sort constant")
+# subplot_specs("sorting_data_points\stdsort_constant.csv", "std::sort sort constant")
 
 # # mng = plt.get_current_fig_manager()
 # # mng.window.showMaximized()
