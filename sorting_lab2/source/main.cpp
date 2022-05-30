@@ -40,51 +40,51 @@ int main()
 
 	std::cout << "\nrandom" << std::endl;
 	std::cout << "	insertion" << std::endl;
-	bench(insertion, "insertion_random.cvs", size, iterations, Random(seed));
+	bench(insertion, "insertion_random.csv", size, iterations, Random(seed));
 	std::cout << "\n	selection" << std::endl;
-	bench(selection, "selection_random.cvs", size, iterations, Random(seed));
+	bench(selection, "selection_random.csv", size, iterations, Random(seed));
 	std::cout << "\n	quicksortl" << std::endl;
-	bench(quicksortl, "quicksortl_random.cvs", size, iterations, Random(seed));
+	bench(quicksortl, "quicksortl_random.csv", size, iterations, Random(seed));
 	std::cout << "\n	quicksortm" << std::endl;
-	bench(quicksortm, "quicksortm_random.cvs", size, iterations, Random(seed));
+	bench(quicksortm, "quicksortm_random.csv", size, iterations, Random(seed));
 	std::cout << "\n	std::sort" << std::endl;
-	bench(sort, "stdsort_random.cvs", size, iterations, Random(seed));
+	bench(sort, "stdsort_random.csv", size, iterations, Random(seed));
 
 	std::cout << "\ngrowing" << std::endl;
 	std::cout << "	insertion" << std::endl;
-	bench(insertion, "insertion_growing.cvs", size, iterations, Growing(seed));
+	bench(insertion, "insertion_growing.csv", size, iterations, Growing(seed));
 	std::cout << "\n	selection" << std::endl;
-	bench(selection, "selection_growing.cvs", size, iterations, Growing(seed));
+	bench(selection, "selection_growing.csv", size, iterations, Growing(seed));
 	std::cout << "\n	quicksortl" << std::endl;
-	bench(quicksortl, "quicksortl_growing.cvs", size, iterations, Growing(seed));
+	bench(quicksortl, "quicksortl_growing.csv", size, iterations, Growing(seed));
 	std::cout << "\n	quicksortm" << std::endl;
-	bench(quicksortm, "quicksortm_growing.cvs", size, iterations, Growing(seed));
+	bench(quicksortm, "quicksortm_growing.csv", size, iterations, Growing(seed));
 	std::cout << "\n	std::sort" << std::endl;
-	bench(sort, "stdsort_growing.cvs", size, iterations, Growing(seed));
+	bench(sort, "stdsort_growing.csv", size, iterations, Growing(seed));
 
 	std::cout << "\nfalling" << std::endl;
 	std::cout << "	insertion" << std::endl;
-	bench(insertion, "insertion_falling.cvs", size, iterations, Falling(seed));
+	bench(insertion, "insertion_falling.csv", size, iterations, Falling(seed));
 	std::cout << "\n	selection" << std::endl;
-	bench(selection, "selection_falling.cvs", size, iterations, Falling(seed));
+	bench(selection, "selection_falling.csv", size, iterations, Falling(seed));
 	std::cout << "\n	quicksortl\n" << std::endl;
-	bench(quicksortl, "quicksortl_falling.cvs", size, iterations, Falling(seed));
+	bench(quicksortl, "quicksortl_falling.csv", size, iterations, Falling(seed));
 	std::cout << "\n	quicksortm" << std::endl;
-	bench(quicksortm, "quicksortm_falling.cvs",  size, iterations, Falling(seed));
+	bench(quicksortm, "quicksortm_falling.csv",  size, iterations, Falling(seed));
 	std::cout << "\n	std::sort" << std::endl;
-	bench(sort, "stdsort_falling.cvs", size, iterations, Falling(seed));
+	bench(sort, "stdsort_falling.csv", size, iterations, Falling(seed));
 
 	std::cout << "\nconstant" << std::endl;
 	std::cout << "	insertion" << std::endl;
-	bench(insertion, "insertion_constant.cvs", size, iterations, Constant(seed));
+	bench(insertion, "insertion_constant.csv", size, iterations, Constant(seed));
 	std::cout << "\n	selection" << std::endl;
-	bench(selection, "selection_constant.cvs", size, iterations, Constant(seed));
+	bench(selection, "selection_constant.csv", size, iterations, Constant(seed));
 	std::cout << "\n	quicksortl" << std::endl;
-	bench(quicksortl, "quicksortl_constant.cvs", size, iterations, Constant(seed));
+	bench(quicksortl, "quicksortl_constant.csv", size, iterations, Constant(seed));
 	std::cout << "\n	quicksortm" << std::endl;
-	bench(quicksortm, "quicksortm_constant.cvs", size, iterations, Constant(seed));
+	bench(quicksortm, "quicksortm_constant.csv", size, iterations, Constant(seed));
 	std::cout << "\n	std::sort" << std::endl;
-	bench(sort, "stdsort_constant.cvs", size, iterations, Constant(seed));
+	bench(sort, "stdsort_constant.csv", size, iterations, Constant(seed));
 
 	return 0;
 }
