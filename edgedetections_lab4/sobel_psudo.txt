@@ -1,0 +1,18 @@
+sobel(inputImage)
+	for each imageRow x in inputImage
+		for each pixel y in row
+
+			accumulator <- 0
+			kernelOffset <- kernelsize / 2
+			x <- 0
+			y <- -kernelOffset
+
+			for each kernelRow in kernel
+				x <- -kernelOffset
+				for each kernelElement in kernelRow
+					multiply pixel value in inputImage at (x,y) with kernelElement
+					add the valur to accumulator
+					x <- x + 1
+				y <- y + 1
+
+			set output pixel to the acumulated value
