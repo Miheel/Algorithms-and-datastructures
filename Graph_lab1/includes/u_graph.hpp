@@ -100,8 +100,9 @@ namespace cor::graph {
 
 		//set distance to startnode to 0
 		this->vertices.at(startNode.ID).distance = 0;
+		std::vector<int> vec;
 
-		for (auto &elem : vertices)
+		for (auto IT = vertices.begin(); IT != vertices.end() ; IT++)
 		{
 			//find the node with the minimum distance
 			Node minVertex = this->minDist();
